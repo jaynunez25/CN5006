@@ -25,5 +25,18 @@ if (number > 0) {
 else if (number == 0) {
     console.log('The number is zero')
 }
+//if number is less than 0 
+else {
+    console.log("the number is negative");
+}
+
+
+
+
+
+
+
+
+
 
 
