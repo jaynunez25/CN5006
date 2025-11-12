@@ -13,6 +13,15 @@ app.get('/about',function(req,res)
 {res.send("This is basic express application")})
 app.get('/users/:userld/books/:bookld',function(req,res) {res.send(req.params)})
 
+app.get('/about/:userid/books/:bookid', function(req, res) {
+  res.send(req.params);
+});
+
+app.get('/users/:userld/books/:bookld', function(req, res) {
+  res.send(req.params);
+});
+
+
 app.get ('/GetStudents',function (req,res)
 
  {studentdata={}
@@ -26,23 +35,26 @@ app.get ('/GetStudents',function (req,res)
   })
 
 
-  app.get('/GetStudentid/:id',(req,res)=>{
-    studentdata={}
-    fs.readFile(__dirname + "/" + "Student.json", 'utf-8', function(err,data) {
-    var students = JSON.parse(data)
-    var student=students["Student" + reqparams,id]
-    console.log("student", student)
-    if(student)
-        res.json(student)
-    else
-    res.json({'status':true, 'Status_Code':200,
-    'requested at': req.localtime,'requrl':req.url,
-    'request Method':req.method,'studentdata':JSON.parse(data)});
-    
-    });
-    
+ app.get("/GetStudentid/:id", (req, res) => {
+  fs.readFile(__dirname + "/Student.json", "utf8", (err, data) => {
+    if (err) {
+      return res.status(500).send("Error reading Student.json");
+    }
 
-})
+    const students = JSON.parse(data);
+    const student = students["Student" + req.params.id];
+
+    if (student) {
+      res.json(student);
+    } else {
+      res.status(404).json({ message: "Student not found" });
+    }
+  });
+});
+
+app.listen(5000, () => {
+  console.log("✅ Server is running on http://127.0.0.1:5000");
+});
 
 app.get('/studentinfo',function(req,res)
 {

@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React in CN5006
+          Learn React in C5006
         </a>
       </header>
     </div>

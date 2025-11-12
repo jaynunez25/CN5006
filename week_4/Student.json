@@ -23,6 +23,15 @@
     "Age" : "25",
     "Qualification" : "A-level",
     "Email" : "emy@gmail.com" , "id": 3
+},
+
+"Student4" : {
+
+    "name": "Emily",
+    "Age" : "78",
+    "Qualification" : "MASTERS",
+    "Email" : "emy@HOTMAIL.com" , "id": 4
 }
+
 }
 

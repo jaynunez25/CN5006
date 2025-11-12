@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-function GreetingElement() { 
- const greeting = 'Hello Lets start learning function Component...'; 
- return ( 
- <div className="App">
- <h1>{greeting}</h1>; 
- </div>
- );
-} 
- export default GreetingElement;
+import React from 'react';
+import './App.css';
 
+function GreetingElement() {
+  const greeting = 'Hello, let’s start learning Function Components...';
+  return (
+    <div className="App">
+      <h1>{greeting}</h1>
+    </div>
+  );
+}
 
+export default GreetingElement;
