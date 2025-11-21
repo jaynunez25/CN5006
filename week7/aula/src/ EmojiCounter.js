@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Love from './love.png';
-import Sad from './sad.png';
-import Like from './like.png';
+import Clouds from './Clouds.png';
+import Sun from './Sun.png';
+import Rain from './Rain.png';
 
 function EmojeeCounter(props) {
   console.log("pic is ", props.pic);
 
-  const [pic, setPic] = useState(Love);
+  const [pic, setPic] = useState(Rain);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     console.log("function called", props.pic);
 
-    if (props.pic === "Love") {
+    if (props.pic === "Rain") {
       setPic(Love);
     } 
-    else if (props.pic === "like") {
+    else if (props.pic === "Clouds") {
       setPic(Like);
     } 
-    else if (props.pic === "sad") {
+    else if (props.pic === "Sun") {
       setPic(Sad);
     }
   }, [props.pic]);

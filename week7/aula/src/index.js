@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Hook_ControlledButtonState/> 
-    <EmojeeCounter pic='love'/>
-     <EmojeeCounter pic='sad'/> 
-     <EmojeeCounter pic='like'/> 
+    <EmojeeCounter pic='Clouds'/>
+     <EmojeeCounter pic='Sun'/> 
+     <EmojeeCounter pic='Rain'/> 
   </React.StrictMode>
 ,
 
