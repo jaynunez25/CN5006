@@ -13,13 +13,13 @@ function EmojeeCounter(props) {
     console.log("function called", props.pic);
 
     if (props.pic === "Rain") {
-      setPic(Love);
+      setPic(Rain);
     } 
     else if (props.pic === "Clouds") {
-      setPic(Like);
+      setPic(Clouds);
     } 
     else if (props.pic === "Sun") {
-      setPic(Sad);
+      setPic(Sun);
     }
   }, [props.pic]);
 
